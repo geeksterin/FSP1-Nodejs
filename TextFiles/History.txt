@@ -18,12 +18,12 @@ Resolve
     - ECMA is an industry association dedicated to the standarlization of information and communication system
     - Netscape wanted a standard specification to which all browser vendors will agree
     - For each new specification ECMA provides a standard specification and a commitee
-    - In case of Javascript , the standard is ECMA-262 and the commitee that works on ECMA-261 is called TC39
+    - In case of Javascript , the standard is ECMA-262 and the commitee that works on ECMA-262 is called TC39
     - ECMA implemented the standards , and created a language called ECAMScript
     - Todays Javascript is build on top of Ecmascript
 
     - 1997 Ecmascript 1
-    - 1198 Ecmascript 2
+    - 1998 Ecmascript 2
     - 1999 Ecmascript 3
     - Ecmascript 4 never released
     - 2009 Ecmascript 5
