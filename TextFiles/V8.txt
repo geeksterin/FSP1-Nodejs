@@ -1,0 +1,17 @@
+Chrome V8 Engine
+The code that we write cannot be understood by the computer, for that we need what is called a JS Engine.
+A Js Engine is a program that converts Js code to machine code that the computers can understand and work with.
+So, in simple terms a Js Engine can execute Js codes.
+Javascript engines are typically developed by web browser vendors.
+    - V8 -> Chrome(2008)
+    - Spider Monkey -> Mozila
+    - JavascriptCore -> Safari
+    - Chakra -> Edge
+
+See v8 docs
+ - Accroding to them, we can embed V8 in our own C++ application, by doing so we can add new features to Javascript
+ - Now as C++ is great for Low Level Operation such a file handling, database connectios and network operations by embedding V8 into C++, you get those superpowers into Javascript
+ - Now here the C++ program that we are talking about is called NODEJS
+
+
+    

@@ -1,0 +1,5 @@
+JS runtime is an ENVIRONMENT which provided all the necessary components in order to use
+and run Javascript program
+A Js engine is one component of the JS runtime.
+Let us understand all other components of a JS runtime by using our loved Chrome browser
+see img 1

@@ -1,0 +1,19 @@
+Node(2009) is an open source, cross platform Javascript runtime environment
+ 
+After the release of NODEJS in 2009, now we can run JS code outside the browser
+to build
+    - Traditional websites
+    - Backend services like APIS
+    - Real-time applications
+    - Streaming services
+    - CLI 
+    etc....
+Node js allows us to build complex and powerfull applications
+See github node src code
+    - Deps folder
+    - Src folder
+    - Lib folder
+see img2
+
+Unlink browser's runtime nodejs dosen't have access to any web api list so there is no WINDOW or DOCUMENT in node js
+

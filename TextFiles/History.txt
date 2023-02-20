@@ -1,0 +1,39 @@
+History about ECMASCRIPT
+
+Creating of Javascript
+    - In 1993 first web browser with a user interface called MOSAIC was released
+    - In 1994 the founders of MOSAIC founded a company called NETSCAPE and created a more polished browser called NETSCAPE NEVIGATOR
+    - Although NETSCAPE NAVIGATOR got the popularity but it lacked the dynamic capabilities ,web pages was only static with no interactivity
+    -  To address this NETSCAPE created a new scriping language called Javascript
+    - Interestingly the name purely was a marketing gimic as JAVA was a popular lan.
+Microsoft
+    - In 1995 Microsoft debuted their browser Internet Explorer , war begun with Netscape
+    - But Microsoft realished that how Javascript changed the user experience and wanted the same for IE
+    - But there was no specification for them to follow
+    - so , in 1996 by reverse engineering of already in service navigator interpreter of Javascript , they created a new scripting langiage called JScript
+    - The differences made the developers life hard , as now they had to develope for both the browsers individually.
+
+Resolve
+    - to resolve the problem Netscape submitted Javascript to ECMA international
+    - ECMA is an industry association dedicated to the standarlization of information and communication system
+    - Netscape wanted a standard specification to which all browser vendors will agree
+    - For each new specification ECMA provides a standard specification and a commitee
+    - In case of Javascript , the standard is ECMA-262 and the commitee that works on ECMA-261 is called TC39
+    - ECMA implemented the standards , and created a language called ECAMScript
+    - Todays Javascript is build on top of Ecmascript
+
+    - 1997 Ecmascript 1
+    - 1198 Ecmascript 2
+    - 1999 Ecmascript 3
+    - Ecmascript 4 never released
+    - 2009 Ecmascript 5
+    - 2015 Ecmascript 2015(ES6) , this one provides modern JS features
+    - and a new version every year since 2015
+
+Though Ecmascript and Javascript technically not same, but the two words are used interchangeably
+
+Summary
+    - ECMA-262 is the language specification
+    - ECMAScript is a langauage that implements ECAM-262
+    - Javacript is basically Ecmascript at its core
+    
