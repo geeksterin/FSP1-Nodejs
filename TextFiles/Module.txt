@@ -1,0 +1,83 @@
+A module is an encapsulated and resuable chunk of code that has its own
+context.
+In Node.js, each file is treated as a separate module.
+
+Type of modules
+----------------
+    - Local modules: Modules that we create in our application
+    - Built-in modules: Modules that Node.js ships with
+    - Third party modules: Modules written by other developers that we can use in our application
+
+Local Modules
+    - Modules that we create in our application (write some examples)
+    - In Node each file is a module , but isolated by default.
+    - To instruct node to execute not only the current module but also the other, we use the commonJs module format.
+    - CommonJs is a standard that states how a module should be structured and shared.
+    - Node adopted commonJs when it started out,in most of the code bases common js is used.
+    - To include the module2 in module1 we use a function called "require".
+    - Now the "require" functions loads the module2 into module1.
+    - Use debugger to trace the code flow.
+    - You don't have to specify .js when requiring js file. But doing so is good practice.
+Module.Exports
+    - Now we know how we can load a separate module into another module. But it is always good to expose only certain functions of a module and keeping rest private.
+    - Like "require" function there is an Object called "module.exports" , using which we can share some functionality of a module and keep the rest private.
+    - write some code
+    - The value of that Object is what the "require" functions returns.
+    - We can store that returned value in a variable.
+    - As the value returned is a reusable block of code, we can use it anytime i want.
+    - The variable name can be anyting, which is also known as "Default Export".
+    - This is the commonJs pattern for imporitng and exporting that node maintains.
+Module scope
+    - Write some code to explain the problem, create two modules.
+    - When executing to diff modules in a single module, there is no naming conflict because each module has there own scope.
+    - Node uses IIFE to get this functinality.
+    - Write some code to explain IIFE.
+    - IIFE is a self invloking functon or immidiately invoked function expression.
+    - Talk about IIFE for a bit, write some code.
+    - Before a module's code is executed , Node will wrap it with a function wrapper that provides module scope.
+    - This save us from naming conflict among variable and functions.
+    - So there is proper encapsulation and reusability in unaffedted ,Eaxtly what we want from a module system.
+Module wrapper
+    - The IIFE that we talked about, contains five parameters,that are important for the workings of a module.
+    - Write some code to explain them how parameter and arg works with iffe.
+    - show them the final version of a module, with all parameter(exports,require,module,__filename,__dirname).
+    - The arguments are injected during runtime by Node.
+    - Explain __filename, __dirname.
+    - Explain all the parameters.
+    - show them final img(module_iife)
+Module caching
+    - Create a class and explain them about module caching.
+    - Every module is first loaded and than it cached.
+    - So every other calles to get the module after is is cached, will return the cached module only.
+    - Show them the cached value using Debugger.
+    - To create a separate instances of Of a class, export the class.
+
+Explain all import export patterns
+    - module.exports = variable
+    - module.exports = function(){}
+    - To export multiple functions use module.exports = Object.
+    - module.exports.f1  ,....., module.exports.fn
+    - replace moduels.exports with exports(its bad)
+module.exports vs exports
+    - exports is a referrence that points to same address in the memory where module.exports points.
+    - Explain them shallow copy by writting some code using object
+    - Now explain img(exports_reff)
+    - node only returns the value of module.exports not exports. exports is just a refference pointing to module.exports.
+
+ES module
+    - We have talked about the commonjs module format.
+    - As the time node was created there was no built in module sustem,so node defaulted with commonjs as its module system.
+    - After es6(es2015) es6 modules was introduced.
+    - called ad Ecmascript modules, es modules or esm
+    - to use the es6 module system, the extension should be .mjs
+        - export default varible 
+        - export default function
+        - export default obj
+        - named export
+        - import * as something
+        - import {} 
+        - Node version above supports es modules
+
+
+
+

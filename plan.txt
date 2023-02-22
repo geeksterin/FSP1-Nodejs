@@ -7,6 +7,6 @@ https://github.com/geeksterin/FSP1-Nodejs
 [ + ] REQ-RES Cycle
 [ + ] REPL -> Read Evaluate Print Loop
 [ + ] Hello World
-[ - ] Module
-[ - ] Types of modules
+[ + ] Module
+[ + ] Local modules
 [ - ] Built in module
