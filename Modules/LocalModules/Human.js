@@ -16,4 +16,5 @@ class Human
     }
 }
 
+// module.exports = new Human("Samiul");
 module.exports = Human;

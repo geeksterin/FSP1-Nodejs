@@ -1,0 +1,12 @@
+- Computers stores and represent data in binary format which is collection of 0s and 1s.(ex 1 = 1,2=10,3=11,4=100 etc..)
+- First computer converts the given data to its binary representation.
+- If the provided data is numerical than directly converts them to binary form.
+- And to reconvert them to there orginal format, computer uses basic maths.ex 4 = 100, 2*2^2 + 0*2^1 + 0*2^0
+- If the data has some character, first computers will convert the character to number, than to binary.
+- "s" = 115 = 1110011
+- computer uses character sets to map a character to its numerical number, like "s" = 115
+- Populer char sets are ASCII and UNICODE.
+- UNICODE is a extended form of ASCII.
+- Its maps "s" to 115
+- explain charcater encoding
+

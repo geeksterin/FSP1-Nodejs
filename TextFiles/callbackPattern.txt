@@ -1,0 +1,13 @@
+In JS function and Classes are first class citizens,
+it means a function or class can be passed as an argument to a functions,
+as well can be returned from a function.
+write some example
+A function that is passed as an argument to another function is known as a callback function.
+The function that accepts the callback or return a function from insdie known as higher order function.
+
+Callbacks are two types
+    - Synchronous callbacks - A callback which is executed immidiatly.(map,filter,sort etc)
+    - Asynchronous callbacks - A callback that is ofter used to resume code execution after an aync operation has completed.
+    - So in async js , callbacks are used to delay the execution of a function until a particuler time ot event has occurred.
+    - This nature is important as in node have an aync nature to prevent blocking
+    - ex - feteching data etc...

@@ -30,9 +30,19 @@
 // console.log(__filename);
 // console.log(__dirname);
 
-const Human = require("./Human");
 
-const SamiulHuman = new Human("Samiul")
-console.log(SamiulHuman.getName());
-const Another = new Human("Ayush")
-console.log(Another.getName());
+// const SamiulHuman =  require("./Human.js");
+// console.log(SamiulHuman.getName());
+// SamiulHuman.setName("Ayush");
+
+// const Another = require("./Human.js");
+// console.log(Another.getName());
+
+
+
+
+// const Human = require("./Human");
+// const SamiulHuman = new Human("Samiul")
+// console.log(SamiulHuman.getName());
+// const Another = new Human("Ayush")
+// console.log(Another.getName());

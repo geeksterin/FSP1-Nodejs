@@ -78,6 +78,43 @@ ES module
         - import {} 
         - Node version above supports es modules
 
+Built In Modules
+    - Modules that Node.js ships with ,also referred as core modules.
+    - Avalible by default when you install node
+    - But to use them you have to import them.
+    - Example of some built in modules would be Path,Events,Fs,Stream,Http etc..
 
+Path module
+    - __filename, __dirname.
+    - Path module provides utilities for working with file and directory paths.
+    - require("node:path") or require("path") 
+    - write some code
+    - basename(path) = provides the last portion of a path
+    - extname(path) = provides the extension of the path(if it is a file than file ext, if a folder than blank)
+    - parse(path) = returns a obj with the significant elements of a path.
+    - format(obj) = creates a path from the obj
+    - isAbsolute(path) = checks if the provided path is absolute or not
+    - important join(seg1,seg2,...,segn) = joins all the segments of a path separating them using the platform specific delimiter and normalizes them as well.
+    - resolve(seg1,seg2,...,segn) = resolves into an absolute path from the point it encounters the last forward slash ignores the initial portion.
+    - many more.....
+Go an uderstand the callback pattern.
+Event module
+    - This module allows us to work with events in node.
+    - An event is an action that has happend in our application that we can respond to.
+    - Using this module, we can create our own custom events and there handler functions in a non blocking way.
+    - give some real life example.
+    - require("node:events") or require("events"), returns a constructor/class.
+    - write some code to explain that.
+    - eventemitter.on(eventName,handler function) -> register a event and attach the coresponding callback.
+    - eventemitter.emit(eventName) -> will emit the event and corresponding callbacks will fire.
+    - pass arguments to parameter
+    - you can register as many event handler you like. 
+    - emitting that event will execute all handler.
+    - show them why it is non blocking.
+    - This is known as Event driven programming, used a lot on node.
+Extend the events class of node, create your own module.
+    -  Matter of fact , mostly all(fs,stream,http,etc...) built in modules in node js extends the Events class.
+    -  create a Shop that implements the event driven style.
 
+Binary data, Character Set, Character Encoding,Streams,Buffer,Async js.
 
