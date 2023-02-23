@@ -1,7 +1,6 @@
-const math = require("./module");
-console.log(math);
-console.log(math.add(1,2));
-console.log(math.sub(1,2));
-console.log(math.div(1,2));
-console.log(math.mul(1,2));
-
+const math = require('./module')
+console.log(math)
+console.log(math.adddtion(12,34))
+console.log(math.substraction(34,5))
+console.log(math.division(34,6))
+console.log(math.multiplication(34,56))

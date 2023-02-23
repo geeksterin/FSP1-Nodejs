@@ -1,10 +1,9 @@
-const math = require("./module");
-console.log(math);
-console.log(math.add(1,2));
-console.log(math.sub(1,2));
-console.log(math.div(1,2));
-console.log(math.mul(1,2));
-
+const math = require('./module')
+console.log(math)
+console.log(math.add(1, 2), '<-------------')
+console.log(math.sub(11, 2), '<-------------')
+console.log(math.div(11, 2), '<-------------')
+console.log(math.mul(1, 2), '<-------------')
 
 // const obj = {}
 
@@ -25,6 +24,3 @@ console.log(math.mul(1,2));
 // const exportS = moduleExports;
 // exportS.add = {}
 // exportS = {"new":"new"};
-
-
-
