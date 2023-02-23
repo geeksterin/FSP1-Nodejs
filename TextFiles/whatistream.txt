@@ -1,6 +1,9 @@
-- A stream is sequence of data that is being moved from one point to anothe over time.
+- A stream is sequence of data that is being moved from one point to anotheR point over time.
 - ex -> stream of water
 - Process streams of data in chunks as they arrive insted of waiting for the entire data to be avalible before processing.
 - ex- watching videos on youtube.
 - using buffers streams are abale to bring data from one point to another.
 explain buffer
+
+60min----
+3min--loaded -> shown to you;

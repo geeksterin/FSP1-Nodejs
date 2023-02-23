@@ -82,7 +82,7 @@ Built In Modules
     - Modules that Node.js ships with ,also referred as core modules.
     - Avalible by default when you install node
     - But to use them you have to import them.
-    - Example of some built in modules would be Path,Events,Fs,Stream,Http etc..
+    - Example of some built in modules would be Path,Events,Fs,Stream,Http,Cluster etc..
 
 Path module
     - __filename, __dirname.

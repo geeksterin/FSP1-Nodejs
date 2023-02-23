@@ -1,7 +1,7 @@
 - Buffers are intentionally small memory space that controls how much data should go to the stream. Node maintains the buffer at run time.
 - Node cannot control the speed at which data arives, but surely can control the speed at wich data will be proccess.
 - If there is more data to process, excess data will wait in the buffer. Or if the there is not sufficient data to process, than the data will wait in buffer until there is enough data.
-- By default the size of buffer in node is 64kbs.
+- By default the size of buffer in node is 64kb ,but it can be resized by node in the iniital phase.
 - Buffer contains data in binary format.
 - There is a global constroctor that you can use to create a buffer.
 - show them the examples.(new Buffer.from(val,encoding)).
@@ -9,3 +9,4 @@
 
 
 show them the funny stream buffer analogy img(stream_buffer).
+

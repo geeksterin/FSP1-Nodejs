@@ -10,7 +10,14 @@ https://github.com/geeksterin/FSP1-Nodejs
 [ + ] Module
 [ + ] Local modules
 [ - ] Built in module
-    [ - ] Path
-    [ - ] events
-[ - ] Character set,encoding , streams,buffer,Aysnc Js
+    [ + ] Path
+    [ + ] events
+    [ + ] Character set,encoding , streams,buffer,Aysnc Js
+    [ - ] FS
+        [ - ] Sync
+        [ - ] Aysnc
+        [ - ] Promise
+    [ - ] http
+    [ - ] Stream
+    [ - ] Cluster
 

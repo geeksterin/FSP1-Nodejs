@@ -3,7 +3,8 @@ Sync = code executed top down,only one line executing at a time.
 blocking = until the execution of the current line ends, next lines will not be executed.
 single-thread = A thread is simplye a light weight process that js uses to execute the task.
 examples.
-Now just JS is not enough to give use Aync nature.
+Now just JS is not enough to give us Aync nature.
 In frontend browser run time env gives js the async nature, in backend node gives the async nature.
 Browsers and Node defines functions and APIs that allow us to register functions that should not be executed
-synchronously , and should instead be invoked ayncly when some kind og event occurs.
+synchronously , and should instead be invoked ayncly when some kind of event occurs.
+

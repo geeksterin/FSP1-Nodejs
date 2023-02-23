@@ -1,8 +1,11 @@
-- Character encoding define how a number in a charcater set as a binary data before in can be stored in a computer.
-- It dictates how many bits to ue to represent the number.
+- Character encoding define how a number in a charcater set as a binary data before it can be stored in a computer.
+- It dictates how many bits to use to represent the number.
 - example = utf-8
 - Utf-8 states that charater should be encoded in bytes(8bits)
 - 4 = 100 = 00000100
-- "s" = 1110011 = 01110011
+- "s" = 115 = 1110011 = 01110011
 - similer guidlines also exits on how images and videos should be encoded and stored in binary format such as base64
 see img(binary_data);
+
+4 = 100 = 00000100 = stores;
+"s" = 115 = 1110011 = 01110011 = stores.
