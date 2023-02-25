@@ -40,3 +40,10 @@
 // const start = Date.now();
 // while(Date.now()-start<=10000);
 // console.log("end");
+
+
+
+function errorFirstCallBack(error,...args)
+{
+    
+}

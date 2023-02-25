@@ -118,3 +118,26 @@ Extend the events class of node, create your own module.
 
 Binary data, Character Set, Character Encoding,Streams,Buffer,Async js.
 
+File System module
+see fsmodule.txt
+
+Http
+    - 
+
+    - https://www.xyz.com
+    - url = www + urlname + .com=type
+    - ipv6 128bits = 2^128
+    - ipv4 32bits = 2^32
+    2^32 = multiple class
+    8.8.8.8
+    class A ,B,C,D,E
+    0 000 0000 = 0 
+    0 111 1111 = 127
+
+    - port = 
+
+    computer networkA = 1000
+             networkB = 231
+ip address = i can identify your machine. How i will identify which application i want to connect with?
+port number = 16 bit = 2^16 
+ip+port = socket number.
