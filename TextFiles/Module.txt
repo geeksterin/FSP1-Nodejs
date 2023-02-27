@@ -121,9 +121,7 @@ Binary data, Character Set, Character Encoding,Streams,Buffer,Async js.
 File System module
 see fsmodule.txt
 
-Http
-    - 
-
+Http module.
     - https://www.xyz.com
     - url = www + urlname + .com=type
     - ipv6 128bits = 2^128
@@ -133,11 +131,49 @@ Http
     class A ,B,C,D,E
     0 000 0000 = 0 
     0 111 1111 = 127
-
-    - port = 
-
     computer networkA = 1000
-             networkB = 231
-ip address = i can identify your machine. How i will identify which application i want to connect with?
-port number = 16 bit = 2^16 
-ip+port = socket number.
+    networkB = 231
+    ip address = i can identify your machine. How i will identify which application i want to connect with?
+    port number = 16 bit = 2^16 
+    ip+port = socket number.
+    (Ip address)
+    (classfull ip address)
+    (classless interdomain routing)
+    (port)
+    (socket number)
+    - https://nodejs.org/dist/latest-v18.x/docs/api/http.html
+    - http module is a built in node module that provides us with the functionality to create http server.
+    - require("node:http") or require("http");
+    - server = http.createServer(options=optional,requestListener = (req,res)=>{}); this method upon invoking returns a http.server instance, 
+    - server.listen(port,cb) = you have to provide a port number,by using the socket number will be generated.
+    - res.writeHead(statusCode,{content-type:type}) = if you don't provide writeHead, browser will automatically sets it, and it could defeat your intentions. So manually set it.
+        - {"content-type":"text/plain"}
+        - {"content-type":"application/json"}
+        - {"content-type":"text/html"}
+        - {"content-type":"text/css"}
+        - {"content-type":"text/js"}
+        - {"content-type":"image/jpg"}
+        - 
+    - explain about statusCode (https://developer.mozilla.org/en-US/docs/Web/HTTP/Status); img(status_code)
+    - res.write(content) = to provide the content in the res obj,
+    - talk a bit about tls hand saking.(https://en.wikipedia.org/wiki/Transport_Layer_Security#:~:text=The%20handshake%20begins%20when%20a,the%20client%20of%20the%20decision.)
+    - res.end() = as http is using http version 1.1 , that uses long poling, or this is also called as persistent http. Where you have to manually expire the req, otherwise it will continue.
+    - create some routes ,explain how this thinks are working. Explain about GET and POST only.
+    - important talk about cors(cross origin resource sharing)(https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) ("Access-Control-Allow-Origin":"*")
+    - craete a toy app, to make them see cors horror. frontend backend integration
+    
+
+
+Third party modules
+    - install postman
+    - talk about NPM = NPM is package manager to download public modules that are created by other js developers.
+    - to install any package using NPM use npm install packageName
+    - visit the npm site.
+    - install express.
+    
+
+
+server has a diffrent ip and port number; = server is in a diffrent origin
+
+
+frontend will also have a diffrent ip and port; = frontend was in a diffrent origin

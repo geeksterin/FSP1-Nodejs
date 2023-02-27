@@ -13,9 +13,9 @@ https://github.com/geeksterin/FSP1-Nodejs
     [ + ] Path
     [ + ] events
     [ + ] Character set,encoding , streams,buffer,Aysnc Js
-    [ - ] FS
-        [ - ] Sync
-        [ - ] Aysnc
+    [ + ] FS
+        [ + ] Sync
+        [ + ] Aysnc
         [ - ] Promise
     [ - ] http
     [ - ] Stream
