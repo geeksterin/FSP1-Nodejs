@@ -26,7 +26,13 @@ post_btn.addEventListener("click",()=>{
         body:JSON.stringify({
             "name":"samiul khan"
         }),
-        "content-type":"application/json"
+        headers:{
+            "content-type":"application/json",
+        
+        }
+        
+
+        
     }).then((res)=>res.json())
     .then((data)=>{
         console.log(data);

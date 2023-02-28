@@ -1,0 +1,21 @@
+Middleware 
+- Express.js Middleware are different types of functions that are invoked by the Express.js routing layer before the final request handler. As the name specified, Middleware appears in the middle between an initial request and final intended route. In stack, middleware functions are always invoked in the order in which they are added.
+- Middleware is commonly used to perform tasks like body parsing for URL-encoded or JSON requests, cookie parsing for basic cookie handling, or even building JavaScript modules on the fly. img(middleware)
+
+- app.use(middleware) = app.use is a method that registers middlewares. create your own middleware and show them
+    - app.use(express.static(static folder path))
+    - show them all the built in middleware from express page.
+- req.body
+- res.status(code).send()
+- express.Router();
+- express.static();
+- express.json();
+- express.urlencoded();
+- https://stackoverflow.com/questions/23259168/what-are-express-json-and-express-urlencoded
+
+Dynamic routing in express
+- /route:name
+- req.params
+
+
+

@@ -161,7 +161,9 @@ Http module.
     - create some routes ,explain how this thinks are working. Explain about GET and POST only.
     - important talk about cors(cross origin resource sharing)(https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) ("Access-Control-Allow-Origin":"*")
     - craete a toy app, to make them see cors horror. frontend backend integration
-    
+    - before posting any data, a preflight call is made to warn the server that some data is coming, free up your buffer, and be ready.
+    - in the preflight call set up the header in res, "Access-Control-Allow-Headers","*"
+    - now the actual POST request will be made.
 
 
 Third party modules
