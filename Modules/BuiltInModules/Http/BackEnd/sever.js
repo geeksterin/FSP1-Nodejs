@@ -36,6 +36,7 @@ const server = http.createServer((req,res)=>{
 
         req.on("end",()=>{
             console.log(body);
+            // req.body = body;
             res.writeHead(200,{"content-type":"application/json"});
             res.write(JSON.stringify({"message":"we got your data"}));
             res.end();

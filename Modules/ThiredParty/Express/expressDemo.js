@@ -37,6 +37,10 @@ app.get("/index",(req,res)=>{
     res.status(200).send("<h1>index</h1>");
 })
 
+app.post("/index",(req,res)=>{
+    
+})
+
 
 app.listen(3500,()=>{
     console.log(`server is up on http://localhost:3500`);

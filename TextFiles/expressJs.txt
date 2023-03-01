@@ -1,21 +1,24 @@
 Middleware 
 - Express.js Middleware are different types of functions that are invoked by the Express.js routing layer before the final request handler. As the name specified, Middleware appears in the middle between an initial request and final intended route. In stack, middleware functions are always invoked in the order in which they are added.
 - Middleware is commonly used to perform tasks like body parsing for URL-encoded or JSON requests, cookie parsing for basic cookie handling, or even building JavaScript modules on the fly. img(middleware)
-
+- https://expressjs.com/en/4x/api.html#express.static
 - app.use(middleware) = app.use is a method that registers middlewares. create your own middleware and show them
     - app.use(express.static(static folder path))
     - show them all the built in middleware from express page.
+- express.static();
 - req.body
 - res.status(code).send()
-- express.Router();
-- express.static();
-- express.json();
-- express.urlencoded();
+- express.json() = is a middleware inbuilt in express to recognize the incoming Request Object as a JSON Object. This method is called as a middleware in your application using the code: app.use(express.json()) , it will not parse data from a html form.
+- express.urlencoded({extended:true}) = express.urlencoded() is a method inbuilt in express to recognize the incoming Request Object as strings or arrays. This method is called as a middleware in your application using the code: app.use(express.urlencoded()), usefull for form data.The extended object set to true to parse nested objects.
 - https://stackoverflow.com/questions/23259168/what-are-express-json-and-express-urlencoded
+- Create two POST endpoints, show them how to send data as json and form-data, and tell them about the diff between express.json() and express.urlencoded({extended:true})
+- create routers using express.Router() = express.Router() helps you to segregate your routes from a single file to multiple files.
 
 Dynamic routing in express
 - /route:name
 - req.params
+
+Go to template engine.
 
 
 
