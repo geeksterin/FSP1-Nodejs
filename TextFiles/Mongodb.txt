@@ -1,0 +1,100 @@
+https://www.mongodb.com/docs/manual/
+Mongodb
+    - Based on JS which uses Mozilas Spider Monkey JS engine.
+    - MongoDb is a NOSQL(Not Only SQL) database, that stores data in a document format, this is why it also known as document database.
+    - Whenever you will create a mongodb cluster , It will be like a entire database, you can divide that entire data into various logical database, just like your harddrive
+    - Each logical database contains Collections,
+    - Each collection contains data a document format.
+    - So when you accure a Space in the physical database, couple of logical database will be there automatically.
+        - Admin
+            - Used to store user authentication information(who is the initiator of the DB)
+        - Config
+            - To store config info of mongodb server. Used by admin only.(server config)
+        - Local
+            - Can be used by admin when using replication process.(RAID)
+    - Creation of logical database and collections happens dynamically(if it has some data), explain what you mean. img(mongo_architechture);
+How MongoDb stores data.
+    - You provide JSON data to mongoDb, mongoDb convertes that data to BSON, than stores it.When you retrive data , you get EJSON format of the data.
+    - JSON(JS object notation)->BSON(Binary JSON) -> EJSON(Extended JSON)
+    - why?
+        - JSON only supports a limited number of basic data types. Most notably, JSON lacks support for dates and binary data.
+        - JSON objects and properties don’t have fixed length which makes traversal slower
+    - BSON stands for “Binary JSON,” and that’s exactly what it was invented to be. BSON’s binary structure encodes type and length information, which allows it to be traversed much more quickly compared to JSON.BSON adds some non-JSON-native data types, like dates and binary data, without which MongoDB would have been missing some valuable support.
+    - show them the bson image from https://www.mongodb.com/json-and-bson
+    - You get EJSON to support the addition of BSON.
+
+Object._id
+    - For every document mongodb while converting that document to BSON attaches a unique 12 byte field to _id, which is called objcet id.
+    - Now Object._id is like primary key in rdbms, which is unique in a collection, but could be same accross different collections.
+    - Now whenever this _id has been allocated it cannot be mutate, in short object._id is immutable.
+    - Explain all the 12 byts.
+        - first 4 = Timestamp when the document was inserted to a collection.
+        - next 3 = represent machine identifier.
+        - next 2 = represent process id.
+        - next 3 = represent some random incremental value.
+        - to see the timestamp use db.collectionName.find()[indexOfDoc].getTimestamp();
+
+Some handy CMDS
+ - To see all logical database use = show dbs;
+ - to select a database use = use dbname(if db is present will be in use otherwise will be created dynamically)
+
+CRUD opearions(Create,Read,Update,Delete);
+Atomic = Either the entire operation will complete or the database will roll back to its original form.
+    Create(atomic)
+        - db.collectionName.insertOne(document) = document will be inserted into "collectionName" in currently in use logical database "db"
+        - db.collectionName.insertMany([document1,document2,....,documentn]) = list of document will be inserted
+    Read
+        - db.collectionName.find() = returns a list of all documents present in "collectionName" collection in "db";
+        - db.collectionName.find(filterObject) = returns a list of all documents present in "collectionName" collection in "db",that satisfies the filter.
+        - db.collectionName.findOne(filterObject) = returns the first object that satisfies the condition
+    Update(atomic)
+        - db.collectionName.updateOne(filterObject,newValueObject = {$set:{property}) = updates the first document that satisfies the fileterObject, and updated the value present in newValueObject
+        - db.collectionName.updateMany(filterObject,newValueObject = {$set:{property}) = updates all documents that satisfies the filterobject.
+        - db.collectionName.replaceOne(filterObject,valueObj={normal}) = replace the first encounter doc that satisfies the filter object condition with valueObj
+    Delete(atomic);
+        - db.collectionName.deleteOne(filterObj) = deletes the first doc that matches the filter
+        - db.collectionName.deleteMany(filterObj) = all deletes
+
+ACID properties
+    Atomicity = All queries in a transaction must succeed.If one fails, all should rollback.
+    Consistency = The database must be consistent before and after the transaction.
+    Isolation = Multiple Transactions occur independently without interference.
+    Durability = Committed transaction must be persisted in a durable non-volatile storage
+
+MongoDB is the only document oriented dbms that supports ACID propertis.
+hm = https://www.mongodb.com/docs/manual/reference/operator/query-comparison/ 
+
+
+
+
+
+cluster = 512mb
+    - you can divide the cluster into smaller chunks = this chunks know as logical database,but by default some logical databases are already present, (config,admin,local)
+    - inside each logical databse we have folders = which is known as collections.
+    - insdie each collection we can store data = this data is known as document.
+
+    cluster = config + local + admin + someleftover
+    someleftover = ld1 + ld2 + ld3 + ... + ldn
+{
+    "name":"samiul"
+} = sending to mongodb -> mongodb converts that json data into bson than it stores the data . you get ejson format
+
+{
+    "date" = BSON = than add date
+}
+
+
+Account samiul  10000
+Account Ayush   10000
+
+
+
+
+
+
+
+samiul wants to transfer 500 to ayush sir
+
+stpes
+    1) debit from my account
+    2) credited to aysh sir account;
