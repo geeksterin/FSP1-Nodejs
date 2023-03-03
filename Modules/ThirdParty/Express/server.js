@@ -21,12 +21,17 @@ app.post("/post/json",(req,res)=>{
 app.post("/post/form",(req,res)=>{
     console.log(req.body);
     res.status(200).send({"message":"we have got your form data"})
+
 })
 
 app.get("/get/:id",(req,res)=>{
     console.log(req.params.id);
     res.status(200).send({"message":"yooo"});
 })
+// http://localhost:port/get/jdgfwegfuwfuw
+// req.params = {
+//     id:jdgfwegfuwfuw;
+// }
 
 
 app.listen(3500,()=>{

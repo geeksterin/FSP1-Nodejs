@@ -1,6 +1,14 @@
 Template engines 
-    - Template engines basically gives you the ability to write create html files using js.
+    - Template engines basically gives you the ability to create html files using js.
     - similer to jsx where you embed js to you html using curly braces, similer to that, you can create html using js using this engines.
-    - there are many template engines present. but we will learn abou ejs.(https://ejs.co/#install)
-    - to use any template engine you have to first tell express that you are going to use a template engine, using app.set("view engine","ejs"), you are saying to express that you are going to use ejs as your template engine.
+    - there are many template engines present. but we will learn about ejs.(https://ejs.co/#install)
     - https://www.npmjs.com/package/ejs
+
+    # return(
+    #     <>
+    #         <h1>{name}</h1>
+    #         {Array.map()}
+    #     </>
+
+
+    # )

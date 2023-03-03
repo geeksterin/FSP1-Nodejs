@@ -6,8 +6,8 @@ Middleware
     - app.use(express.static(static folder path))
     - show them all the built in middleware from express page.
 - express.static();
-- req.body
-- res.status(code).send()
+- req.body = holds the data send from the frontend.
+- res.status(code).send().
 - express.json() = is a middleware inbuilt in express to recognize the incoming Request Object as a JSON Object. This method is called as a middleware in your application using the code: app.use(express.json()) , it will not parse data from a html form.
 - express.urlencoded({extended:true}) = express.urlencoded() is a method inbuilt in express to recognize the incoming Request Object as strings or arrays. This method is called as a middleware in your application using the code: app.use(express.urlencoded()), usefull for form data.The extended object set to true to parse nested objects.
 - https://stackoverflow.com/questions/23259168/what-are-express-json-and-express-urlencoded

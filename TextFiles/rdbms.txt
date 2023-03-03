@@ -1,0 +1,43 @@
+create a table called student
+
+studentdId      fname       lname       age     class
+
+12345           samiul      khan        20      btech
+
+67890           superman    das         19      superhero
+
+23415           batman      das         21      syperhero
+
+
+collection = table;
+document = record;
+
+entireDatabase = logicaldatabase1 + logicaldatabase2 + logicaldatabase3 + .... +logicaldatabaseN
+
+logicaldatabase = t1 + t2 + t3 + t4 + ... + tn;
+
+tables = stores records or data.
+
+students
+[
+    {
+        "studentId":12345,
+        "fname":"samiul",
+        "lname":"khan",
+        "age":20,
+        "class":"btech"
+    },
+    {
+        "studentId":67890,
+        "fname":"superhero",
+        "lname":"das",
+        "age":19,
+        "class":"superhero"
+    }
+    
+]
+
+
+
+
+
