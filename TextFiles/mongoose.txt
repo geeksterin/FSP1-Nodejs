@@ -1,0 +1,85 @@
+https://www.mongodb.com/developer/languages/javascript/mongoose-versus-nodejs-driver/
+https://mongoosejs.com/
+Mongoose
+    - Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js. It manages relationships between data, provides schema validation, and is used to translate between objects in code and the representation of those objects in MongoDB.The problem that Mongoose aims to solve is allowing developers to enforce a specific schema at the application layer. In addition to enforcing a schema, Mongoose also offers a variety of hooks, model validation, and other features aimed at making it easier to work with MongoDB
+    - As we all know that mongodb will not restrict you from putting data of inconsistent json structure.
+    - Using Mongoose we can make sure that the json structure of a particuler collections remains consistent accross all document.
+    - Mongoose not only validates the structure but also has a driver(Drivers allow your nodejs application to connect with you mongodb database) called mongoclient.
+Terminology
+    - Collections(Student) = Collections in Mongo are equivalent to tables in relational databases. They can hold multiple JSON documents
+    - Documents(record of a single student) = Documents are equivalent to records or rows of data in SQL. While a SQL row can reference data in other tables, Mongo documents usually combine that in a document(Eliminating Join queries).
+    - Fields(name) = Fields, also known as properties or attributes, are similar to columns in a SQL table. In the image above, FirstName, LastName, Email, and Phone are all fields.
+    - Schema = While MongoDb is schema-less, SQL defines a schema via the table definition. A Mongoose schema is a document data structure (or shape of the document) that is enforced via the application layer.(basically a prototype of a form)
+    - SchemaTypes = While Mongoose schemas define the overall structure or shape of a document, SchemaTypes define the expected data type for individual fields (String, Number, Boolean, and so on).You can also pass in useful options like required(schema validation) to make a field non-optional, default to set a default value for the field, and many more.
+    - Models = Models are higher-order constructors that take a schema and create an instance of a document equivalent to records in a relational database.(just like the acutal form),using this model, you can do CRUD operation in the database.
+
+Create a mongodb cluster on cloud 
+Use mongoose and create schemas and models.
+explain them about the schema validation.(the required keyword)
+show them the CRUD operation.
+{
+    "name"
+}
+{
+    "phone"
+}
+
+{
+    "name","phone'"
+}
+Stduent
+studentSchema = {
+    "name":{
+        type:"String",
+        require:true
+    },
+    "phone":
+    {
+        type:String,
+        required:true
+    }
+}
+
+studentModel = func(studentSchema);
+
+{
+    "name":"samiul",
+    "phone":12345
+}
+{
+    "name":"Ayush",
+    "phone":1234567890
+}
+{
+    "name":"ewjgkw" 
+   "phone":1413431
+
+}
+
+
+object data = you have to provide by ensuring the model that momgoose has created for that data
+
+
+
+form = samiul khan,tony das, shatanik mahanty
+
+
+samiul khan
+
+71111
+
+west bengal
+
+p1  =name , age    actual form will be of p1 prototype.
+p2 = phone
+p3 = address
+
+four wheels,color red = schema
+
+fourwheel and color red = Model
+
+
+tables(name,age,address)
+
+samiul-khan
+Po8rt2aEDuTbkeoq
