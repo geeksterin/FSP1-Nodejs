@@ -1,0 +1,20 @@
+Model = Book
+
+Book = {
+    isbn,name,authors:[String],genre:[String],count
+}
+
+
+/get/ = get Info about all Book in books collection
+/get/morethanonecount = get all those books whoes count is more than one.
+/get/:isbn = get book with the given isbn and decress count if present in database, 
+/get/:author = get All books of this author.
+/get/deletebooks = {isbn,count} = delete the isbn books with the given number. 
+
+/post/ = post a book info to books collections;{b1, c2}
+/post/addbooks = add the book to database.[{b1,c1},{b2,c2}]
+/post/addnumber = {isbn,count} = increment the count.
+/post/changeName = {isbn,newName} = change the name of the book with the isbn to newName 
+
+
+
