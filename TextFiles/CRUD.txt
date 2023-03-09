@@ -18,3 +18,5 @@ Book = {
 
 
 
+/auth/signup = We will provide a sign up machenism for users.
+/auth/sign = to signin users.

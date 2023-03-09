@@ -1,0 +1,27 @@
+Encryption is a way of translating data from plaintext (unencrypted) to ciphertext (encrypted).
+Encryption is one way, that is you can encrypt data but cannot decrypt the already encrypted data.
+
+when encrypting = Data -> Data+salt(key) -> Encrypt using various algorithm(sha512,sha256) -> Encryption(store this encryption)
+when checking wheather the provided data is correct or false
+
+Data -> Data+salt(key) -> Encrypt using various algorithm(sha512,sha256) -> compare this encryption with already stored Encryption, if both are same than data is same.
+
+
+How strong your encryption will be depends upon how strong your salt(key) is.
+To create strong salt(key) you can use the nodejs inbuilt Crypto module, that deals entrily in encryption of data.
+crypto.randomBytes(bytes).toString("hex"); will create a randomBytes string of size=bytes in hex format.
+
+
+Now whenever a user would like to signup,they at minimum would provide their {name,email,password};
+Now in database we will store {name,email,encrypted(password)};
+Now when signin we will compare their password with the stored password.
+
+
+[srcaddress,destaddess]["hi, i am iron man"] = "ewwijguwegewutuwiernsdbjshfjhs" = [srcaddress,destaddess]["hi, i am iron man"]
+
+1) [srcaddress,destaddess]["hi, i am iron man"] + salt(key)
+2) Encryption will happen
+3) Encryption will be decypted using the same salt(key);
+
+
+

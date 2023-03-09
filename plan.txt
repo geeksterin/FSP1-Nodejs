@@ -28,3 +28,4 @@ https://github.com/geeksterin/FSP1-Nodejs
 [ - ] Promise recap
 [ - ] Async await
 [ + ] mongoose
+[ - ] JWT

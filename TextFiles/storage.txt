@@ -1,0 +1,7 @@
+Localstorage = You can store large amount of data, this data is not deleted even if the browser is closed.
+Sessionstorage = In Sessionstorage you can store data of a particuler session.Whenever you open up a url in your browser a session is created, and data related to that seesion is stored in session storage. whenever you close that site, the coresponding session and all data of that sessions that were store in Sessionstorage are wiped.
+Cookie = In cookie you can store relatively less amount of data compared to Localstorage and Sessionstorage. But cookie has some security features.
+    http-only = true, in cookie by making this option true(http only cookie), the data inside the cookie now cannot be read by any participents.An HttpOnly Cookie is a tag added to a browser cookie that prevents client-side scripts from accessing data. It provides a gate that prevents the specialized cookie from being accessed by anything other than the server.
+    transfer = cookies are automatically attached to the req object.
+    We will be using cookie to store the access token, so that, the acess token is automaticcaly send to the server with every req is made.
+img(authentication.png)
