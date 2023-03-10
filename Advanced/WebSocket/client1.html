@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text">
+    <button>send</button>
+    <ul></ul>
+
+    <script>
+
+        const input = document.querySelector("input");
+        const btn = document.querySelector("button");
+        const ul = document.querySelector("ul");
+
+        const socket = new WebSocket("ws://localhost:3600");
+        socket.addEventListener("open",()=>{
+            console.log("connection has been established 1");
+        })
+
+        socket.addEventListener("message",({data})=>{
+            const li = document.createElement("li");
+            li.innerText = data;
+            ul.appendChild(li);
+        })
+
+        btn.addEventListener("click",()=>{
+            const val = input.value;
+            socket.send(val);
+            input.value = "";
+        })
+
+
+    </script>
+    
+</body>
+
+
+</html>
