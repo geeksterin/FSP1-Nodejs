@@ -1,0 +1,17 @@
+https://jestjs.io/docs/getting-started
+
+we write algo
+we pass in some test cases to this algo for which we already know the output
+
+1>algo>2
+
+
+unit
+
+function sum(a,b)
+{
+    return a+b;
+}
+
+
+sum(2,2) = should give me 4

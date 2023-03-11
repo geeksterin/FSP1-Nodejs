@@ -23,8 +23,7 @@ server.listen(3600,()=>{
 // btn.addEventListener("click",(e)=>{
 
 // })
-// wss.clients = [client1Ws,client2Ws,client3Ws]
+// wss.clients = [client2Ws,client1Ws]
 
 // client1 = client1Ws
 // client2 = client2Ws
-// client3 = client3Ws
