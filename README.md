@@ -61,4 +61,19 @@ General:
 
 - Create an Express route that accepts a PATCH request and updates an object in memory based on a query parameter called "id".
 
+- How would you implement data modeling in MongoDB?
+
+-  Can you explain the difference between a replica set and a sharded cluster in MongoDB?
+-  Can you walk me through the process of creating a MongoDB index?
+-  What is a covered query in MongoDB?
+-  Can you explain how MongoDB handles concurrency control?
+-  How would you handle database backups and disaster recovery in MongoDB?
+-  How does the aggregation framework in MongoDB work?
+-  Can you explain the concept of map-reduce in MongoDB?
+-  How would you handle schema changes in MongoDB?
+-  Can you explain how MongoDB handles document versioning?
+-  How would you optimize the performance of a MongoDB database?
+-  Can you explain how to implement transactions in MongoDB?
+Can you walk me through the process of integrating MongoDB with Express.js?
+
 
