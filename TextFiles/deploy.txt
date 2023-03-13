@@ -1,0 +1,16 @@
+steps
+1) Allow MongoDB database to all.
+2) Push your code to a github repo.
+3) add the script "start:node server.js"
+4) Go to railway.app,and signup or signin using github.
+5) click on the new project button
+6) Select github from all the options to get the code.
+7) select the repo from github that you want to host.
+8) again select github in railway.
+9) railway will have that repo in the list.
+10) click on that repo.
+11) first deploye
+12) add all env variables.
+14) got to setting and click on "create url button", you will get the hosted url, this url is replacing "http://localhost:port"
+15) using that url you can access your repo.
+16) don't freak out.
