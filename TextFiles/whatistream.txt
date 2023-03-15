@@ -7,3 +7,40 @@ explain buffer
 
 60min----
 3min--loaded -> shown to you;
+
+- NodeJs in its core heavily uses Streams(ex fs module)
+- There are four fundamemtal types of stream
+        - i) Writable => Stream in which data can be written.(fs.createWriteStream());
+        - ii) Readable => Stream from which data can be read.(fs.createReadStream());
+        - iii) Duplex => Streams that are both readable and writtable.
+        - iv) Transform => can modify data while reading or writing
+- Strems also implememt nodejs events module.
+show some example using the fs module.
+Pipe
+    - Pipe is a way for connecting multiple streams together.
+    - leftStream.pipe(rightStream) = leftStream(readableStream),rightStream(writable,Duplex,Transform)
+Custom stream
+    - {Readable,Writable,Transform} = require("stream")
+Readable
+    const readableStream = new Readable({
+        read(size) {},
+    });
+Writable
+    const writableStream = new Writable({
+        write(chunk) {
+        console.log("i am in writableStream");
+        console.log(chunk.toString());
+        },
+    });
+  
+Transform
+    const transFormStream = new Transform({
+        transform(chunk, encoding, cb) {
+        const modifiedData = chunk.toString().replace("Lorem", "Samiul");
+        cb(null, modifiedData);
+        },
+    });
+
+
+
+
