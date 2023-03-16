@@ -1,0 +1,18 @@
+- We all know that js is sync, single threaded , blocking language. And js runtime enviroment provides js the power to handle the async codes.
+- Libuv is cross platform open source library written in c language.
+- This is the library that nodejs(js run time) uses to handle all sort of async operations.
+- It dose this using two most important features, Thread pool and native async mechanisams(event loop).
+
+Thread Pool
+    - Thread is a light weight process, in a multicore cpu enviroment, OS breaks down a runing process into multiple threads.
+    - Libuv's thread pool, as its name suggect is a pool of threads , whenever nodejs encounters any cpu bounded async task, it uses the libuv's thread pool to resolve.(img libuv)
+    - Using the thread pool, node js always make sure that the main thread is not blocking , when ever node encounters a blocking code it hands over the code to libuv, and continues with the main thread.
+    - Write come cpu bounded code(both sync and async using the crypto.pbkdf2()), explain more about the thread pool.(img libuv)
+    - Libuv's thread pool has 4 threads by default.
+    - To increase the thread pool size, we can increment the node enviromental variable(UV_THREADPOOL_SIZE) that defines the number of thread the pool should have.
+        - show them what happens if you increse the size more than the number of cpu cores.
+    - Now this thread pool only comes into the pictures if the async task is cpu bounded or file io bounded, give them an example of network io bounded operation like using the https module, to make it clear that network io bounded opearations don't uses the thread pool.
+    - Both crypto.pbkdf2() and https.request(url,(res)=>).end() are async operations, as the first one is cpu bounded it uses the thread pool, where as the latter is  network io bounded and it dose not uses the thread pool.
+    
+Native async mechanisams(Event Loop)
+    -
