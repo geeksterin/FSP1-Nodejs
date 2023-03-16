@@ -14,5 +14,57 @@ Thread Pool
     - Now this thread pool only comes into the pictures if the async task is cpu bounded or file io bounded, give them an example of network io bounded operation like using the https module, to make it clear that network io bounded opearations don't uses the thread pool.
     - Both crypto.pbkdf2() and https.request(url,(res)=>).end() are async operations, as the first one is cpu bounded it uses the thread pool, where as the latter is  network io bounded and it dose not uses the thread pool.
     
-Native async mechanisams(Event Loop)
-    -
+Native async mechanisams(Event Loop) https://stackoverflow.com/questions/25568613/node-js-event-loop
+    - One of the core part of Libuv.
+    - Event loop is program written in c language to co-ordinate sync and async code.
+    - This loop is alive till your node js application is up and running.
+    - There are 6 different queues that event loop handles to maintain the async operations.
+        - Timer queue - Callback associated with setTimeout and setInterval
+        - I/O queue - Callbacks associated to async non cpu bounded methods.
+        - Check queue - Callbacks associated with setImmidiate function which is node specific and not present in browser.
+        - Microtask queue
+            - NextTic Queue - process.nextTick callbacks.
+            - promise  queue - callbacks associated with promises.
+        - Close queue 
+    - important - Accept the microtask queue, all the other queues are part of Libuv. Microtask queue is part of node runtime enviroment and plays a important role in the async operation.
+    - img(diagram_eventloop)
+    - Only after the the execution reaches the end of thread, the async operations comes into picture
+
+Order of execution
+    i) Microtask 
+        - NextTickqueue
+        - Promise Queue
+    ii) TimeQueue
+    iii) Microtask 
+        - NextTickqueue
+        - Promise Queue
+    iv) IO queue
+    v) Microtask 
+        - NextTickqueue
+        - Promise Queue
+    vi) Check Queue
+    vii) Microtask 
+        - NextTickqueue
+        - Promise Queue
+    viii) Close Queue
+    ix) Microtask 
+        - NextTickqueue
+        - Promise Queue
+    - At the end if there are more callbacks to execute the steps gets repeated otherwise event loop exits.
+
+Show them the execution order in Microtask queue
+i) cbs of timer queue only executes after the cbs of microtask queue
+ii) cbs of microtask queue can be executed in between the execution of cbs in timer queue.
+iii) cbs in setTimeout are executed in FIFO order.
+iv ) cbs in micro executes before cbs in IO queue
+v) show them the anomaly queue to 0ms delay.when a setTimeout sets up a delay of 0ms ,along with a IO cb,the order of execution can naver be predicted.(show them the DOM timer) ,https://chromium.googlesource.com/chromium/blink/+/master/Source/core/frame/DOMTimer.cpp
+vi) Io queue cbs are executed after microtask queue and time queue.
+vii) because of IO polling the cbs associated with io operation dosen't get into the IO queue in the first run, but in the second run only.
+viii) Check queue callbacks are executed after Microtask queues callbacks, Timer queue callbacks and I/O queue callbacks are executed 
+ix)  Microtask queues callbacks are executed after I/O callbacks and before check queue callbacks
+x)  Microtask queues callbacks are executed inbetween check queue callbacks
+xi )  Close queue callbacks are executed after all other queues callbacks
+
+
+
+
