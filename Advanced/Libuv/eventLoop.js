@@ -144,6 +144,20 @@ this is setTimeout 3
 // Promise.resolve().then(() => console.log("this is Promise.resolve 3"));
 
 //--
+/**
+ 
+ this is process.nextTick 1
+this is process.nextTick 2
+his is the inner next tick inside next tick
+this is Promise.resolve 1
+this is Promise.resolve 2
+this is Promise.resolve 3
+ this is the inner next tick inside Promise then block
+ this is setTimeout 1
+this is setTimeout 2
+this is the inner promise inside setTimeout
+this is setTimeout 3
+ */
 // setTimeout(() => console.log("this is setTimeout 1"), 0);
 // setTimeout(() => {
 //   console.log("this is setTimeout 2");
@@ -156,7 +170,7 @@ this is setTimeout 3
 // process.nextTick(() => {
 //   console.log("this is process.nextTick 2");
 //   process.nextTick(() => {
-//     console.log(console, "this is the inner next tick inside next tick");
+//     console.log("this is the inner next tick inside next tick");
 //   });
 // });
 // Promise.resolve().then(() => console.log("this is Promise.resolve 1"));
@@ -168,7 +182,24 @@ this is setTimeout 3
 // });
 // Promise.resolve().then(() => console.log("this is Promise.resolve 3"));
 //-
+/**
+ 
+ time =
+ this is setTimeout 3
+ this is setTimeout 2
+ this is setTimeout 1
+ 
+ */
 // setTimeout(() => console.log("this is setTimeout 1"), 1000);
+// setTimeout(() => console.log("this is setTimeout 2"), 500);
+// setTimeout(() => console.log("this is setTimeout 3"), 0);
+//--
+/**
+ time = cb1,cb3,cb2  .. 200 cbs times finished first than line 201 , 200 cbs can also finish latter than the 201 line
+ */
+// setTimeout(() => console.log("this is setTimeout 1"), 1000);
+// const start = Date.now();
+// while (Date.now() - start <= 1000) {}
 // setTimeout(() => console.log("this is setTimeout 2"), 500);
 // setTimeout(() => console.log("this is setTimeout 3"), 0);
 
@@ -190,7 +221,8 @@ this is setTimeout 3
 // fs.readFile(__filename, () => {
 //   console.log("this is readFile 1");
 // });
-// //-
+
+//--
 // const fs = require("fs");
 
 // fs.readFile(__filename, () => {
@@ -203,6 +235,15 @@ this is setTimeout 3
 // for (let i = 0; i < 2000000000; i++) {}
 
 //-io polling
+
+/**
+ next = 
+ promise =
+ timer = 
+ I/o  = 
+ check = 
+
+ */
 
 // const fs = require("fs");
 
@@ -229,7 +270,7 @@ this is setTimeout 3
 // setTimeout(() => console.log("this is setTimeout 1"), 0);
 
 // for (let i = 0; i < 2000000000; i++) {}
-// //-
+//--
 // const fs = require("fs");
 // fs.readFile(__filename, () => {
 //   console.log("this is readFile 1");
@@ -255,15 +296,14 @@ this is setTimeout 3
 //   Promise.resolve().then(() => console.log("this is Promise.resolve 1"));
 // });
 // setImmediate(() => console.log("this is setImmediate 3"));
-// //-
+//--
 // const fs = require("fs");
 
 // const readableStream = fs.createReadStream(__filename);
-// readableStream.close();
-
 // readableStream.on("close", () => {
 //   console.log("this is from readableStream close event callback");
 // });
+// readableStream.close();
 // setImmediate(() => console.log("this is setImmediate 1"));
 // setTimeout(() => console.log("this is setTimeout 1"), 0);
 // Promise.resolve().then(() => console.log("this is Promise.resolve 1"));
