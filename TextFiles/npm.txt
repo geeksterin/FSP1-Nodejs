@@ -1,0 +1,52 @@
+npm = node package manager
+package.json
+    - It is npm's config file.
+    - It is a json file that typically lives in the root directory of your package and holds various metadata relevant to the package.
+    - This file is the central place to config and describe how to interact and run your package
+    - Create your own package.json, and explain all fileds in detail, two maindetory feilds are name,version
+    {
+        "name": name-of-package,
+        "version":sem-ver(major.minor.patch),
+        "description":this desc will be used to describe packages in npm registry,
+        "keywords":[k1,k2,k3... keywords helps packages fast],
+        "main":entry point to project,
+        "scripts":{
+            "script-name":"script",
+        },
+        "bin":{
+            "cmd":"entry point"
+        }
+        ,
+        "author":"author-name",
+        "license":"ISC",
+        "dependencies":{
+            name:version
+        }
+    }
+
+    - We don't have to create this file manually , we use the npm cli to do, using the npm init or npm init -y cmd.
+    to install a package =  npm install/i packageName
+    to install a package of particuler version = npm i packageName@version
+    to install all the dependencies at once simply use npm install
+Global package
+    - to install any package globallu we use the sudo(mac) npm install -g packname cmd /sudo(mac) npm uninstall -g packname .
+-Npm scripts
+    - An npm script is a convenient way to bundle common commands for use in a project.
+    - They are typically entered in the command line in order to do something with the apllication
+    - Npm scripts are stored in a project's json file, giving access to everyone who has access to the codebase.
+    - They also ensures that everyone is using the same cmds with same options.
+    - common use cases would starting dev server "start":"node entry.js" or to star testing "test":"jest",
+    - Npm scripts are executed using the command npm run "script-name"
+Publising to npm registry
+    - create a accout on https://www.npmjs.com/
+    - npm adduser <username>
+    - npm publish
+    - https://npmjs.com/package/<package-name>
+-Shabang, pass on arg on cli
+    - #!/usr/bin/env node (this think is known as shabang or hashbang, it basically tells os which interpreter to use and location of that)
+    - add the script name to "bin" option in package.json
+    - now install this package globally, using sudo npm install -g
+    - process.argv = to take input from cli
+
+    https://docs.npmjs.com/
+    https://semver.org/

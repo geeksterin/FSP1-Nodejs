@@ -1,0 +1,20 @@
+{
+  "name": "custom-npm-samiul",
+  "version": "1.0.0",
+  "description": "using thic package i am teaching json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "bin": {
+    "samiul": "index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
