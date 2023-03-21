@@ -1,0 +1,4 @@
+/api/signup = post = {name,email,password} = store user details in a database.
+/api/signin = post = {email,password} = we will validate wheather the email and password are valid or not than we will send the access token
+/api/ = get = We wil fetch all contacts from database and send it ti the client.
+/api/postcontact = post = {name,phone} = if this contact is already presetn,if  not we will store this new contact in the database.
