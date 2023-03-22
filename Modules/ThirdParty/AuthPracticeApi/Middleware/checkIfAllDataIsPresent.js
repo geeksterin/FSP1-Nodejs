@@ -65,6 +65,25 @@ class DataCheck {
 
     next();
   }
+
+  checkIfOldAndNewPasswordPresent(req, res, next) {
+    const { email, oldPassword, newPassword } = req.body;
+    if (!email || !oldPassword || !newPassword) {
+      res.status(400).send({ message: "Provide all the data" });
+      return;
+    }
+    next();
+  }
+
+  checkIFEmailAndPasswordArePresent(req, res, next) {
+    const { email, password } = req.body;
+    if (!email || !password) {
+      res.status(400).send({ message: "Provide all the data" });
+      return;
+    }
+
+    next();
+  }
 }
 
 module.exports = new DataCheck();

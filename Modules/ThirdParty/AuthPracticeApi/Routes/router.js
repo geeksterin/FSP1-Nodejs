@@ -28,4 +28,17 @@ router.get(
   ReturnData.giveSomeDataBack
 );
 
+router.post(
+  "/update",
+  DataCheck.checkIfAccessTokenIsValid,
+  DataCheck.checkIfOldAndNewPasswordPresent,
+  ReturnData.updatePassword
+);
+router.post(
+  "/delete",
+  DataCheck.checkIfAccessTokenIsValid,
+  DataCheck.checkIFEmailAndPasswordArePresent,
+  ReturnData.deleteAccount
+);
+
 module.exports = router;
