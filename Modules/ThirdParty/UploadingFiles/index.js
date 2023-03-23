@@ -1,4 +1,6 @@
-const app = require("express")();
+const express = require("express");
+const app = express();
+app.use(express.json());
 const multer = require("multer");
 
 const storage = multer.diskStorage({
@@ -6,13 +8,14 @@ const storage = multer.diskStorage({
     cb(null, "Upload");
   },
   filename: function (req, file, cb) {
-    cb(null, `${file.fieldname}-${Math.random()}.jpg`);
+    console.log(file);
+    cb(null, `${file.originalname}`);
   },
 });
 
 const upload = multer({
   storage,
-}).single("file");
+}).any();
 
 // const storage1 = multer.diskStorage({
 //   destination: function (req, file, cb) {
@@ -41,6 +44,7 @@ const upload = multer({
 // }).single("file");
 
 app.post("/jpg", upload, (req, res) => {
+  console.log(req.file);
   res.status(200).send({ message: "File uploaded" });
 });
 // app.post("/gif", upload2, (req, res) => {
